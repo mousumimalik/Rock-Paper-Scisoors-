@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="score-board">
+            <div class="title">
+                <img src="./assets/title.png">
+            </div>
+            <div class="score">
+                <p>score</p>
+                <h1>0</h1>
+            </div>
+        </div>
+
+        <div class="hands">
+            <div class="hand paper">
+                <img src="./assets/Paper.png" onclick="pickUserHand('paper')">
+            </div>
+            <div class="hand scissors">
+                <img src="./assets/Scissors.png" onclick="pickUserHand('scissors')">
+            </div>
+            <div class="hand rock">
+                <img src="./assets/Rock.png" onclick="pickUserHand('rock')">
+            </div>
+        </div>
+
+        <div class="contest">
+            <div class="user-hand">
+                <h1>you picked</h1>
+                <div class="hand-img-cont">
+                    <img id="user-pick-img" src="./assets/Paper.png">
+                </div>
+            </div>
+            <div class="referee">
+                <div class="desision">
+                    <h1>you win!</h1>
+                </div>
+                <div class="new-game" onclick="restarGame()">
+                    play again
+                </div>
+            </div>
+            <div class="comp-hand">
+                <h1>the house picked</h1>
+                <div class="hand-img-cont">
+                    <img id="comp-pick-img" src="./assets/Scissors.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
